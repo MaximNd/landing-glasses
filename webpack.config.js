@@ -13,7 +13,10 @@ if (env === 'dev') {
 } else if (env === 'production') {
     sourceMap = false;
 }
-    
+
+
+
+
 
 module.exports = {
     entry: {
@@ -42,14 +45,18 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
+                    publicPath: '../',
                     fallback: 'style-loader',
                     use: [{
-                        loader: 'css-loader',
+                        loader: 'css-loader?url=false',
                         options: {
-                            minimize: true,
-                            sourceMap: sourceMap
+                            minimize: true
+                            // sourceMap: sourceMap
                         }
-                    }, 
+                    },
+                    {
+                        loader: 'resolve-url-loader'
+                    },
                     {
                         loader: 'postcss-loader',
                         options: {
@@ -79,13 +86,22 @@ module.exports = {
                 test: /\.(png|jpe?g|svg|gif)$/,
                 use: [
                     {
-                      loader: 'file-loader',
-                      options: {
-                          name: '[name].[ext]',
-                          outputPath: 'img/'
-                      }
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'img/'
+                        }
                     }
                 ]
+            },
+            {
+                test: /\.(eot|ttf|woff|woff2)$/,
+                use: {
+                    loader: 'url-loader',
+                    query:  {
+                        limit: 1000000
+                    }
+                }
             }
         ]
     },

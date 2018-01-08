@@ -5,7 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script> -->
+    <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="setting col-10 col-sm-12 col-md-4 col-lg-6">
+                        <div class="language">
+                            <p>Language:
+                                <select id="lang">
+                                    <option value="">English</option>
+                                    <option value="">Russian</option>
+                                    <option value="">Ukraine</option>
+                                </select>
+                            </p>
+                        </div>
+                        <div class="currency">
+                            <p>Currency: 
+                                <select id="currency">
+                                    <option value="">USD</option>
+                                    <option value="">UAH</option>
+                                    <option value="">BJJ</option>
+                                </select>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="menu col-2 col-sm-12 col-md-8 col-lg-6">
+                        <div class="basic-menu">
+                            <ul>
+                                <li><a href="#">Account</a></li>
+                                <li><a href="#">Wishlist</a></li>
+                                <li><a href="#">Checkout</a></li>
+                                <li><a href="#">Log In</a></li>
+                                <li><a href="#">Sign Up</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown-menu">
+                            <div class="bars" data-items="dropdown-menu-items">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                            <div id="dropdown-menu-items" class="dropdown-menu-items">
+                                <ul>
+                                    <li><a href="#">Account</a></li>
+                                    <li><a href="#">Wishlist</a></li>
+                                    <li><a href="#">Checkout</a></li>
+                                    <li><a href="#">Log In</a></li>
+                                    <li><a href="#">Sign Up</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="logo_menu col-12 col-xl-7">
+                        <div class="row">
+                            <div class="logo col-12 col-xl-5">
+                                <h1>LEO SHOP</h1>
+                            </div>
+                            <div class="menu col-12 col-xl-7">
+                                
+                                <ul>
+                                    <li><a href="#">HOME</a></li>
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">MEN</a></li>
+                                    <li><a href="#">OTHER</a></li>
+                                    <li><a href="#">PURCHASE</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search_cart col-12 col-xl-5">
+                        <div class="row rigth-bottom-menu">
+                            <div class="search col-12 col-xl-5">
+                                <input type="text" placeholder="Search...">
+                            </div>
+                            <div class="icons col-5 col-xl-3">
+                                <div class="tag">
+                                    <i class="fas fa-tags"></i>
+                                </div>
+                                <div class="cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                            <div class="items-in-cart col-4 col-xl-3">
+                                CART (0)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="banner"></section>
+    <section class="products-and-sidebar"></section>
+    <section class="staff-pick"></section>
+    <section class="new-product"></section>
+    <footer></footer>
 </body>
 </html>
