@@ -1,3 +1,4 @@
+//@ts-check
 import { addEvent }  from './../helpers/helpers.js';
 
 

@@ -1,0 +1,97 @@
+@import './../vendors/FontAwesome/scss/fontawesome.scss';
+@import './../vendors/FontAwesome/scss/fa-regular.scss';
+
+
+
+#banner {
+    .slider {
+        .slider-inner {
+            .slider-item {
+                width: 100%;
+                height: 480px; // TODO delete
+                background-image: url('./../../img/sliderGlasses.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: 100% 30%;
+                
+                .slider-item-content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    min-height: 100%;
+                    color: $white;
+
+                    .text-top {
+                        font-family: $light;
+                        font-size: 30px;
+                        padding: 12px 30px 12px 15px;
+                        background-color: $gray-dark;
+                        opacity: 0.8;
+                        margin-left: 50px;
+                        margin-bottom: 3px;
+                        width: 290px;
+
+                        @media screen and (max-width: 576px) {
+                            margin-left: 0;
+                            font-size: 29px;
+                            width: 280px;
+                        }
+                    }
+
+                    .text-bottom {
+                        font-family: $bold;
+                        font-size: 30px;
+                        padding: 12px;
+                        background-color: $gray-dark;
+                        opacity: 0.8;
+                        margin-left: 50px;
+                        width: 350px;
+
+                        @media screen and (max-width: 576px) {
+                            margin-left: 0;
+                            font-size: 29px;
+                            width: 295px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .next, .prev {
+            position: absolute;
+            @extend %circle;
+            background-color: $white;
+            width: 67px;
+            height: 67px;
+            font-size: 30px;
+            color: $gray-light;
+            top: 43.5%;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+            transition: box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            }
+
+            i {
+                margin-top: 18.7px;
+            }
+        }
+
+        .prev {
+            left: 2%;
+
+            i {
+                margin-left: 22px;
+            }
+        }
+
+        .next {
+            right: 2%;
+            i {
+                margin-left: 25px;
+            }
+        }
+    }
+}

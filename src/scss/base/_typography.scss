@@ -1,2 +1,3 @@
 @include font-face($regular, '#{$path-fonts}/OpenSans/Regular/', 'OpenSans-Regular');
 @include font-face($bold, '#{$path-fonts}/OpenSans/Bold/', 'OpenSans-Bold');
+@include font-face($light, '#{$path-fonts}/OpenSans/Light/', 'OpenSans-Light');
