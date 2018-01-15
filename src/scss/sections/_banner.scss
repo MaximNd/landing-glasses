@@ -7,8 +7,7 @@
     .slider {
         .slider-inner {
             .slider-item {
-                width: 100%;
-                height: 480px; // TODO delete
+                max-width: 100%;
                 background-image: url('./../../img/sliderGlasses.jpg');
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -17,8 +16,6 @@
                 .slider-item-content {
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
-                    min-height: 100%;
                     color: $white;
 
                     .text-top {
@@ -27,15 +24,32 @@
                         padding: 12px 30px 12px 15px;
                         background-color: $gray-dark;
                         opacity: 0.8;
-                        margin-left: 50px;
+                        margin-left: 79px;
                         margin-bottom: 3px;
-                        width: 290px;
+                        margin-top: 240px;
+                        width: 25%;
+
+                        @media screen and (max-width: 1200px) {
+                            width: 31%;
+                        }
+
+                        @media screen and (max-width: 992px) {
+                            width: 42%;
+                        }
+
+                        @media screen and (max-width: 768px) {
+                            width: 58%;
+                        }
 
                         @media screen and (max-width: 576px) {
+                            padding-right: 10px;
+                            margin-top: 40px;
                             margin-left: 0;
-                            font-size: 29px;
-                            width: 280px;
+                            font-size: 18px;
+                            width: 50%;
                         }
+
+                        
                     }
 
                     .text-bottom {
@@ -44,14 +58,33 @@
                         padding: 12px;
                         background-color: $gray-dark;
                         opacity: 0.8;
-                        margin-left: 50px;
-                        width: 350px;
+                        margin-left: 79px;
+                        margin-bottom: 240px;
+                        width: 30%;
+
+                        @media screen and (max-width: 1200px) {
+                            width: 39%;
+                        }
+
+                        @media screen and (max-width: 992px) {
+                            width: 52%;
+                        }
+
+                        @media screen and (max-width: 768px) {
+                            width: 70%;
+                        }
 
                         @media screen and (max-width: 576px) {
+                            padding-right: 10px;
+                            margin-bottom: 40px;
                             margin-left: 0;
-                            font-size: 29px;
-                            width: 295px;
+                            font-size: 18px;
+                            width: 50%;
                         }
+                    }
+
+                    @media screen and (max-width: 576px) {
+                        align-items: center;
                     }
                 }
             }
@@ -67,15 +100,20 @@
             color: $gray-light;
             top: 43.5%;
             box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-            transition: box-shadow 0.3s ease-in-out;
+            transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
             cursor: pointer;
 
             &:hover {
                 box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+                transform: scale(1.1);
             }
 
             i {
                 margin-top: 18.7px;
+            }
+
+            @media screen and (max-width: 576px) {
+                top: 33%;
             }
         }
 
