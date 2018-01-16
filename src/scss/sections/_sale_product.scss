@@ -1,10 +1,16 @@
-.new-product {
+.sale-product {
     position: relative;
+
+    .old-price {
+        text-decoration: line-through;
+        color: #000;
+        font-size: 14px;
+    }
 }
 
-.new-product-ribbon {
+.sale-product-ribbon {
     position: absolute;
-    right: -5px; top: -5px;
+    left: -5px; top: -5px;
     z-index: 1;
     overflow: hidden;
     width: 100px; height: 100px;
@@ -18,23 +24,23 @@
         text-transform: uppercase;
         text-align: center;
         line-height: 20px;
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
         width: 120px;
         display: block;
-        background: $blue-light;
+        background: $green-light;
         box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
         position: absolute;
-        top: 17.5px; right: -27.5px;
+        top: 17.5px; left: -27.5px;
 
         &::before {
             content: "";
             position: absolute; left: 0px; top: 100%;
             z-index: -1;
-            border-left: 3px solid #2d9fbb;
+            border-left: 3px solid #709E1E;
             border-right: 3px solid transparent;
             border-bottom: 3px solid transparent;
-            border-top: 3px solid #2d9fbb;
+            border-top: 3px solid #709E1E;
         }
 
         &::after {
@@ -42,9 +48,9 @@
             position: absolute; right: 0px; top: 100%;
             z-index: -1;
             border-left: 3px solid transparent;
-            border-right: 3px solid #2d9fbb;
+            border-right: 3px solid #709E1E;
             border-bottom: 3px solid transparent;
-            border-top: 3px solid #2d9fbb;
+            border-top: 3px solid #709E1E;
         }
     }
 }
