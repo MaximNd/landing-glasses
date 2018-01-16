@@ -12,3 +12,10 @@ new Carousel({
     prev: '.prev',
     autoPlay: false
 });
+
+new Carousel({
+    slider: '#sidebar-slider',
+    slidesContainer: '.sidebar-slider-inner',
+    indicators: '.sidebar-slider-indicators',
+    autoPlay: false
+});
