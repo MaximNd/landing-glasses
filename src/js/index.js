@@ -10,12 +10,14 @@ new Carousel({
     slidesContainer: '.slider-inner',
     next: '.next',
     prev: '.prev',
-    autoPlay: false
+    autoPlay: true,
+    delay: 5000
 });
 
 new Carousel({
     slider: '#sidebar-slider',
     slidesContainer: '.sidebar-slider-inner',
     indicators: '.sidebar-slider-indicators',
-    autoPlay: false
+    autoPlay: true,
+    delay: 2000
 });
